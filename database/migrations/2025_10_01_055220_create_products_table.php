@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('barcode')->nullable()->unique();
             $table->text('description')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

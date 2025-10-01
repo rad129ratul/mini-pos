@@ -19,7 +19,7 @@ class ProductResource extends JsonResource
             'barcode' => $this->barcode,
             'description' => $this->description,
             'image' => $this->image,
-            'formatted_price' => 'à§³' . number_format($this->price, 2),
+            'formatted_price' => '৳' . number_format($this->price, 2),
             'category' => [
                 'id' => $this->category->id,
                 'name' => $this->category->name,
