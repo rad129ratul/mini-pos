@@ -209,6 +209,13 @@ DB_PASSWORD=${{MySQL.MYSQL_PASSWORD}}
 
 ## 📸 Screenshots
 
+# Mini POS System
+
+<div align="center">
+  <img src="screenshots/dashboard.png" alt="Mini POS Dashboard" width="800">
+  <p><em>Professional Point of Sale System - Laravel + Vue.js</em></p>
+</div>
+
 See `/screenshots` folder for:
 - Dashboard view
 - POS interface
@@ -246,10 +253,9 @@ See `/screenshots` folder for:
 ## 👤 Author
 
 **Your Name**
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- 🐙 GitHub: [@your-username](https://github.com/your-username)
-- 🌐 Portfolio: your-portfolio.com
+- 📧 Email: ratulrs29@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/shaikh-radwan-374435358](linkedin.com/in/shaikh-radwan-374435358)
+- 🐙 GitHub: [@rad129ratul](https://github.com/rad129ratul)
 
 ## 📄 License
 
