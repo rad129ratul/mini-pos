@@ -299,7 +299,3 @@ php artisan serve & npm run dev
 - **Low Stock Alert**: < 10 units
 - **Currency**: Bangladeshi Taka (৳)
 - **Demo Data**: 5 categories, 30 products
-
----
-
-**Built with ❤️ for job applications** | **Development Time: 12 hours** | **Production Ready ✓**
