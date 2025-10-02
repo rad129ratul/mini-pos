@@ -3,37 +3,35 @@
     <Navbar />
     <div class="d-flex">
       <Sidebar class="d-none d-md-block" />
-      <main class="flex-grow-1 p-4" :class="{ 'with-sidebar': true }">
+      <main class="flex-grow-1 p-4 main-content">
         <router-view />
       </main>
     </div>
-    <Toast />
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar.vue'
 import Sidebar from './Sidebar.vue'
-import Toast from '../Common/Toast.vue'
 
 export default {
   name: 'AppLayout',
   components: {
     Navbar,
-    Sidebar,
-    Toast
+    Sidebar
   }
 }
 </script>
 
 <style scoped>
-.with-sidebar {
+.main-content {
   margin-left: 250px;
   margin-top: 56px;
+  min-height: calc(100vh - 56px);
 }
 
 @media (max-width: 768px) {
-  .with-sidebar {
+  .main-content {
     margin-left: 0;
   }
 }

@@ -45,7 +45,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-9iDwT7xO.js",
+    "file": "assets/app-CtrPb6go.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -59,7 +59,7 @@
       "resources/js/views/Sales.vue"
     ],
     "css": [
-      "assets/app-C5vYiR6G.css"
+      "assets/app-CJm0H-Lo.css"
     ],
     "assets": [
       "assets/bootstrap-icons-mSm7cUeB.woff2",
@@ -67,7 +67,7 @@
     ]
   },
   "resources/js/views/Dashboard.vue": {
-    "file": "assets/Dashboard-zafIxxd1.js",
+    "file": "assets/Dashboard-DpfME_jX.js",
     "name": "Dashboard",
     "src": "resources/js/views/Dashboard.vue",
     "isDynamicEntry": true,
@@ -82,7 +82,7 @@
     ]
   },
   "resources/js/views/POS.vue": {
-    "file": "assets/POS-CbKudc2J.js",
+    "file": "assets/POS-7nWzmhBX.js",
     "name": "POS",
     "src": "resources/js/views/POS.vue",
     "isDynamicEntry": true,
@@ -99,7 +99,7 @@
     ]
   },
   "resources/js/views/Products.vue": {
-    "file": "assets/Products-DiYRsciF.js",
+    "file": "assets/Products-DxlJC1hx.js",
     "name": "Products",
     "src": "resources/js/views/Products.vue",
     "isDynamicEntry": true,
@@ -112,7 +112,7 @@
     ]
   },
   "resources/js/views/Sales.vue": {
-    "file": "assets/Sales-DmuWWN6I.js",
+    "file": "assets/Sales-0ZstyIvd.js",
     "name": "Sales",
     "src": "resources/js/views/Sales.vue",
     "isDynamicEntry": true,
