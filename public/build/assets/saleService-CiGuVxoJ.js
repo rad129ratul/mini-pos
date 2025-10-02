@@ -1,0 +1,1 @@
+import{a as t}from"./api-DPQzmjXj.js";const a={getAll(e={}){return t.get("/sales",{params:e})},getById(e){return t.get(`/sales/${e}`)},create(e){return t.post("/sales",e)},getDashboardStats(){return t.get("/dashboard/stats")}};export{a as s};

@@ -1,0 +1,1 @@
+import{a}from"./vendor-D4pjJ2_S.js";const r=a.create({baseURL:"/api",headers:{"Content-Type":"application/json",Accept:"application/json"}});r.interceptors.response.use(e=>e.data,e=>{const s=e.response?.data?.message||e.response?.data?.error||"An error occurred";return console.error("API Error:",s),Promise.reject(e)});export{r as a};
