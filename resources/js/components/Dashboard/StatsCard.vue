@@ -7,7 +7,8 @@
           <h2 class="mb-0 fw-bold">{{ formattedValue }}</h2>
         </div>
         <div>
-          <i :class="`bi ${icon} fs-1`" :style="{ color: color }"></i>
+          <!-- <i :class="`bi ${icon} fs-1`" :style="{ color: color }"></i> -->
+          <i :class="`bi fs-1`" :style="{ color: color }"></i>
         </div>
       </div>
     </div>
