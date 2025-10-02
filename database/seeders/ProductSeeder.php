@@ -10,6 +10,9 @@ class ProductSeeder extends Seeder
 {
     public function run(): void
     {
+        // Clear existing products
+        Product::truncate();
+        
         $products = [
             ['category_id' => 1, 'name' => 'Samsung 55" Smart TV', 'price' => 45000, 'cost_price' => 38000],
             ['category_id' => 1, 'name' => 'iPhone 14 Pro', 'price' => 120000, 'cost_price' => 105000],
