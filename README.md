@@ -266,7 +266,7 @@ DB_PASSWORD=${{MySQL.MYSQL_PASSWORD}}
 
 **Your Name**
 - 📧 Email: ratulrs29@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/shaikh-radwan-374435358](linkedin.com/in/shaikh-radwan-374435358)
+- 💼 LinkedIn: [linkedin.com/in/shaikh-radwan-374435358](https://www.linkedin.com/in/shaikh-radwan-374435358/)
 - 🐙 GitHub: [@rad129ratul](https://github.com/rad129ratul)
 
 ## 📄 License
