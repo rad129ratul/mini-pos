@@ -44,6 +44,7 @@
           <button 
             class="btn btn-success btn-lg w-100 mb-2" 
             @click="openCheckout"
+            type="button"
           >
             <i class="bi bi-credit-card me-2"></i>
             Checkout
@@ -51,6 +52,7 @@
           <button 
             class="btn btn-outline-danger w-100" 
             @click="clearCart"
+            type="button"
           >
             <i class="bi bi-trash me-2"></i>
             Clear Cart
@@ -77,7 +79,8 @@ export default {
   },
   setup() {
     const cartStore = useCartStore()
-    return { cartStore }
+    const toastStore = useToastStore()
+    return { cartStore, toastStore }
   },
   methods: {
     formatPrice(price) {
@@ -89,11 +92,15 @@ export default {
     clearCart() {
       if (confirm('Are you sure you want to clear the cart?')) {
         this.cartStore.clearCart()
-        useToastStore().success('Cart cleared')
+        this.toastStore.success('Cart cleared')
       }
     },
     openCheckout() {
-      this.$refs.checkoutModal.show()
+      this.$nextTick(() => {
+        if (this.$refs.checkoutModal) {
+          this.$refs.checkoutModal.show()
+        }
+      })
     }
   }
 }
