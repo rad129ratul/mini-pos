@@ -213,15 +213,27 @@ DB_PASSWORD=${{MySQL.MYSQL_PASSWORD}}
 
 <div align="center">
   <img src="screenshots/dashboard.png" alt="Mini POS Dashboard" width="800">
-  <p><em>Professional Point of Sale System - Laravel + Vue.js</em></p>
 </div>
 
-See `/screenshots` folder for:
-- Dashboard view
-- POS interface
-- Cart and checkout
-- Product management
-- Mobile responsive view
+<div align="center">
+  <img src="screenshots/pos-screen.png" alt="Mini POS pos-screen" width="800">
+</div>
+
+<div align="center">
+  <img src="screenshots/checkout-modal.png" alt="Mini POS checkout-modal" width="800">
+</div>
+
+<div align="center">
+  <img src="screenshots/product-list.png" alt="Mini POS product-list" width="800">
+</div>
+
+<div align="center">
+  <img src="screenshots/product-form.png" alt="Mini POS product-form" width="800">
+</div>
+
+<div align="center">
+  <img src="screenshots/sales-history.png" alt="Mini POS sales-history" width="800">
+</div>
 
 ## 🎨 Features Showcase
 
