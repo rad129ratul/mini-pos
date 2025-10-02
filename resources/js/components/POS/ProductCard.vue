@@ -1,5 +1,5 @@
 <template>
-  <div class="card h-100 product-card" @click="handleClick">
+  <div class="card h-100 product-card">
     <img 
       :src="product.image || 'https://via.placeholder.com/300'" 
       class="card-img-top" 
