@@ -44,7 +44,7 @@ Portfolio project demonstrating full-stack development skills for job applicatio
 
 **1. Clone repository**
 ```bash
-git clone https://github.com/your-username/mini-pos.git
+git clone https://github.com/rad129ratul/mini-pos.git
 cd mini-pos
 ```
 
