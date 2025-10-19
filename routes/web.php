@@ -48,6 +48,26 @@ Route::get('/debug-data', function () {
     }
 });
 
+// Manual reset route (remove after use)
+Route::get('/reset-db', function () {
+    try {
+        Artisan::call('migrate:fresh --force');
+        Artisan::call('db:seed --force');
+        
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Database reset and seeded successfully!',
+            'categories_count' => Category::count(),
+            'products_count' => Product::count()
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'status' => 'error',
+            'message' => $e->getMessage()
+        ]);
+    }
+});
+
 // Your main SPA route
 Route::get('/{any}', function () {
     return view('app');
