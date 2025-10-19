@@ -14,17 +14,24 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        // Use public MySQL URL if available (Railway fix)
-        if (env('MYSQL_PUBLIC_URL')) {
-            $url = parse_url(env('MYSQL_PUBLIC_URL'));
-            
-            config([
-                'database.connections.mysql.host' => $url['host'] ?? null,
-                'database.connections.mysql.port' => $url['port'] ?? 3306,
-                'database.connections.mysql.database' => trim($url['path'] ?? '', '/'),
-                'database.connections.mysql.username' => $url['user'] ?? null,
-                'database.connections.mysql.password' => $url['pass'] ?? null,
-            ]);
+        // Railway MySQL connection fix - try public URL if internal fails
+        if (env('MYSQL_PUBLIC_URL') && env('DB_CONNECTION') === 'mysql') {
+            try {
+                $url = parse_url(env('MYSQL_PUBLIC_URL'));
+                
+                if ($url && isset($url['host'])) {
+                    config([
+                        'database.connections.mysql.host' => $url['host'],
+                        'database.connections.mysql.port' => $url['port'] ?? 3306,
+                        'database.connections.mysql.database' => trim($url['path'] ?? '', '/'),
+                        'database.connections.mysql.username' => $url['user'] ?? '',
+                        'database.connections.mysql.password' => $url['pass'] ?? '',
+                    ]);
+                }
+            } catch (\Exception $e) {
+                // Log error but don't break the application
+                \Log::error('Failed to parse MYSQL_PUBLIC_URL: ' . $e->getMessage());
+            }
         }
     }
 }
