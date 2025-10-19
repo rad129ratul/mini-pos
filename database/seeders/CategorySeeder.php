@@ -8,10 +8,7 @@ use Illuminate\Database\Seeder;
 class CategorySeeder extends Seeder
 {
     public function run(): void
-    {
-        // Clear existing categories
-        Category::truncate();
-        
+    {   
         $categories = [
             [
                 'name' => 'Electronics',
@@ -41,7 +38,10 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            Category::create($category);
+            Category::firstOrCreate(
+                ['slug' => $category['slug']],
+                $category
+            );
         }
     }
 }

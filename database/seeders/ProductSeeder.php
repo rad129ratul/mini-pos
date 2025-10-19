@@ -9,10 +9,7 @@ use Illuminate\Support\Str;
 class ProductSeeder extends Seeder
 {
     public function run(): void
-    {
-        // Clear existing products
-        Product::truncate();
-        
+    {   
         $products = [
             ['category_id' => 1, 'name' => 'Samsung 55" Smart TV', 'price' => 45000, 'cost_price' => 38000],
             ['category_id' => 1, 'name' => 'iPhone 14 Pro', 'price' => 120000, 'cost_price' => 105000],
@@ -51,17 +48,20 @@ class ProductSeeder extends Seeder
         ];
 
         foreach ($products as $index => $product) {
-            Product::create([
-                'category_id' => $product['category_id'],
-                'name' => $product['name'],
-                'slug' => Str::slug($product['name']),
-                'price' => $product['price'],
-                'cost_price' => $product['cost_price'],
-                'stock_quantity' => rand(10, 100),
-                'image' => "https://picsum.photos/300/300?random=" . ($index + 1),
-                'barcode' => str_pad(rand(1000000000000, 9999999999999), 13, '0', STR_PAD_LEFT),
-                'description' => 'High quality ' . strtolower($product['name'])
-            ]);
+            Product::firstOrCreate(
+                ['slug' => Str::slug($product['name'])],
+                [
+                    'category_id' => $product['category_id'],
+                    'name' => $product['name'],
+                    'slug' => Str::slug($product['name']),
+                    'price' => $product['price'],
+                    'cost_price' => $product['cost_price'],
+                    'stock_quantity' => rand(10, 100),
+                    'image' => "https://picsum.photos/300/300?random=" . ($index + 1),
+                    'barcode' => str_pad(rand(1000000000000, 9999999999999), 13, '0', STR_PAD_LEFT),
+                    'description' => 'High quality ' . strtolower($product['name'])
+                ]
+            );
         }
     }
 }
