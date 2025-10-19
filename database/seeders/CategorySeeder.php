@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class CategorySeeder extends Seeder
 {
     public function run(): void
-    {   
+    {
         $categories = [
             [
                 'name' => 'Electronics',
@@ -17,7 +17,7 @@ class CategorySeeder extends Seeder
             ],
             [
                 'name' => 'Clothing',
-                'slug' => 'clothing',
+                'slug' => 'clothing', 
                 'description' => 'Shirts, pants, shoes and apparel'
             ],
             [
@@ -38,10 +38,7 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            Category::firstOrCreate(
-                ['slug' => $category['slug']],
-                $category
-            );
+            Category::create($category);
         }
     }
 }
